@@ -3,6 +3,10 @@ const{UserModel}=require("./model/model")
 const { connection } = require("./config/connection");
 const app = express();
 
+app.use(cors({
+  origin: "*"
+}))
+
 app.get("/",async(req,res)=>{
     const data=await UserModel.find();
     res.send({msg:data});
