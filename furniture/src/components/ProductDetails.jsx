@@ -12,7 +12,7 @@ console.log(data.id)
     const GetData=async(e)=>{
    
         try{
-            let result=await axios.get(` http://localhost:8080/products/${data.id}`);
+            let result=await axios.get(`https://dataforfurniture.onrender.com/products/${data.id}`);
             console.log(result.data)
             setDt(result.data);
 
